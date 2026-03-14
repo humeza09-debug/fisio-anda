@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak Kami</title>
+
+<style>
+
+:root{
+--blue-dark:#457b9d;
+--blue-light:#caf0f8;
+--blue-soft:#f1f9ff;
+--white:#ffffff;
+}
+
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:var(--blue-soft);
+}
+
+/* HEADER + NAV */
+
+header{
+background:var(--blue-dark);
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+margin:0;
+color:white;
+font-size:24px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:20px;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:var(--blue-light);
+}
+header{
+background:#457b9d;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo-title a{
+display:flex;
+align-items:center;
+text-decoration:none;
+}
+
+.logo-title img{
+height:80px;
+width:auto;
+margin-right:12px;
+border-radius:8px;
+}
+
+.logo-title h1{
+margin:0;
+font-size:26px;
+color:white;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#caf0f8;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1000px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* JAM LAYANAN */
+
+.jam{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+
+.jam td{
+padding:8px;
+border-bottom:1px solid #ddd;
+}
+
+.jam td:first-child{
+font-weight:bold;
+color:#457b9d;
+}
+
+/* FORM */
+
+form{
+display:grid;
+gap:12px;
+}
+
+input, textarea{
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+button{
+padding:12px;
+border:none;
+border-radius:6px;
+background:var(--blue-dark);
+color:white;
+cursor:pointer;
+font-size:15px;
+}
+
+button:hover{
+background:#2c5d78;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+display:inline-block;
+margin-top:10px;
+padding:10px 15px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+}
+
+.whatsapp:hover{
+background:#1da851;
+}
+
+/* MAP */
+
+.map{
+margin-top:30px;
+border-radius:10px;
+overflow:hidden;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+.grid{
+grid-template-columns:1fr;
+}
+}
+
+ footer {
+    background-color: var(--blue-light);
+    padding: 20px 40px;
+    text-align: center;
+    color: var(--text-dark);
+  }
+
+  footer a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+
+</style>
+</head>
+
+<header>
+
+<div class="logo-title">
+<a href="index.html">
+<img src="image/fisioterapi anda.png" alt="Logo Fisioterapi">
+<h1>Fisioterapi Anda</h1>
+</a>
+</div>
+
+<nav>
+<a href="index.html">Beranda</a>
+<a href="testimoni.html">Testimoni</a>
+<a href="testimoni-pasien.html">Patient Testimoni</a>
+<a href="kontak.html">Kontak</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="info">
+
+<h2>Informasi Kontak</h2>
+
+<p><b>📞 Telepon:</b><br>
++62 896-7703-3785</p>
+
+<p><b>✉ Email:</b><br>
+fisioterapi@email.com</p>
+
+<a class="whatsapp" href="https://wa.me/6289677033785" target="_blank">
+Chat via WhatsApp
+</a>
+
+<h3>Jam Layanan</h3>
+
+<table class="jam">
+<tr><td>Saturday</td><td>07.00 – 18.00</td></tr>
+<tr><td>Sunday</td><td>Tutup</td></tr>
+<tr><td>Monday</td><td>07.00 – 18.00</td></tr>
+<tr><td>Tuesday</td><td>07.00 – 18.00</td></tr>
+<tr><td>Wednesday</td><td>07.00 – 18.00</td></tr>
+<tr>
+<td>Thursday</td>
+<td>07.00 – 18.00<br><small>(Hari Raya – jam bisa berbeda)</small></td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>07.00 – 18.00<br><small>(Hari Raya – jam bisa berbeda)</small></td>
+</tr>
+</table>
+
+</div>
+
+<div>
+
+<h2>Kirim Pesan</h2>
+
+<form onsubmit="kirimPesan(event)">
+
+<input type="text" id="nama" placeholder="Nama Anda" required>
+
+<input type="email" id="email" placeholder="Email Anda" required>
+
+<textarea id="pesan" placeholder="Tulis pesan Anda..." required></textarea>
+
+<button type="submit">Kirim Pesan</button>
+
+</form>
+
+</div>
+
+</div>
+</div>
+
+<footer>
+© Fisioterapi Anda 
+</footer>
+
+<script>
+
+function kirimPesan(event){
+
+event.preventDefault();
+
+/* ambil isi form */
+
+let nama = document.getElementById("nama").value;
+let email = document.getElementById("email").value;
+let pesan = document.getElementById("pesan").value;
+
+/* nomor whatsapp admin */
+
+let nomorAdmin = "6289677033785";
+
+/* format pesan */
+
+let teks =
+"Halo Admin Fisioterapi Anda\n\n" +
+"Nama : " + nama + "\n" +
+"Email : " + email + "\n" +
+"Pesan : " + pesan;
+
+/* buat link whatsapp */
+
+let linkWA = "https://wa.me/6289677033785" + nomorAdmin + "?text=" + encodeURIComponent(teks);
+
+/* buka whatsapp */
+
+window.open(linkWA,"_blank");
+
+/* pindah ke halaman sukses */
+
+setTimeout(function(){
+window.location.href="pesan-berhasil.html";
+},1000);
+
+}
+
+</script>
+
+</body>
+</html>

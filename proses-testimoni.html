@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimoni Terkirim</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#caf0f8,#219653);
+}
+
+.box{
+background:white;
+padding:40px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
+max-width:400px;
+}
+
+.icon{
+font-size:60px;
+color:#219653;
+}
+
+h2{
+margin-top:10px;
+color:#219653;
+}
+
+p{
+color:#444;
+}
+
+button{
+margin-top:20px;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+background:#457b9d;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#2c5d78;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="icon">✔</div>
+
+<h2>Testimoni Berhasil Dikirim</h2>
+
+<p>Terima kasih telah memberikan testimoni untuk layanan fisioterapi kami.</p>
+
+<button onclick="kembali()">Kembali ke Beranda</button>
+
+</div>
+
+<script>
+
+function kembali(){
+    window.location.href = "index.html";
+}
+
+// jika ingin otomatis pindah setelah beberapa detik
+function prosesTestimoni(){
+    setTimeout(function(){
+        window.location.href = "testimoni-berhasil.html";
+    },2000);
+}
+
+</script>
+
+</body>
+</html>
